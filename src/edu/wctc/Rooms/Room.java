@@ -25,5 +25,8 @@ public abstract class Room {
         this.lootBehaviorSimpleFactory = new LootBehaviorSimpleFactory();
     }
 
+    public abstract void initialize(String data);
+    public abstract void initialize();
+
     //Room getAdjoiningRoom();
 }

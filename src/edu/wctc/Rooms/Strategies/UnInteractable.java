@@ -1,6 +1,6 @@
 package edu.wctc.Rooms.Strategies;
 
-import static edu.wctc.Main.NULL_ATTEMPT;
+import static edu.wctc.MazeDriver.NULL_ATTEMPT;
 
 public class UnInteractable implements InteractableBehavior{
     @Override

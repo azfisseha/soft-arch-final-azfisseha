@@ -1,10 +1,17 @@
-package edu.wctc.Rooms;
+package edu.wctc.Rooms.Builders;
 
+
+import edu.wctc.Rooms.Room;
+
+import java.util.Locale;
 
 public abstract class RoomBuilder {
     public Room buildRoom(String type)
     {
         //TODO:
+        Room room = createRoom(type);
+
+
         return null;
     }
 

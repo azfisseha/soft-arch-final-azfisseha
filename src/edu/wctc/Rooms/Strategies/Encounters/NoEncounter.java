@@ -1,8 +1,6 @@
 package edu.wctc.Rooms.Strategies.Encounters;
 
-import edu.wctc.Rooms.Strategies.Encounters.EncounterBehavior;
-
-import static edu.wctc.Main.NULL_ATTEMPT;
+import static edu.wctc.MazeDriver.NULL_ATTEMPT;
 
 public class NoEncounter implements EncounterBehavior {
     @Override
