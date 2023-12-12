@@ -67,9 +67,9 @@ public class Player {
 
     private boolean promptYesNoMenu(String prompt)
     {
-        Scanner keyboard = new Scanner();
         System.out.println(prompt + "\n(Y)es/(N)o");
         String input = keyboard.nextLine();
 
+        return input.toLowerCase().charAt(0) == 'y';
     }
 }

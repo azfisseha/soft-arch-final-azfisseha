@@ -1,5 +1,6 @@
 package edu.wctc.Rooms.Strategies;
 
+import edu.wctc.Loot.Loot;
 import edu.wctc.Loot.LootGenerator;
 
 public class LootBehaviorSimpleFactory{
@@ -15,7 +16,9 @@ public class LootBehaviorSimpleFactory{
         LootableBehavior lootable = null;
         switch (lootableBehavior.toLowerCase().charAt(0)) {
             case 'u'-> lootable = new UnLootable();
-            case 'l'-> lootable = new Lootable(rngLootFactory.getLoot());
+            //TODO:
+            case 'l'-> lootable = new Lootable(rngLootFactory.getLoot(""));
+            case 'r'-> lootable = new Lootable(rngLootFactory.getLoot());
         }
 
         return lootable;

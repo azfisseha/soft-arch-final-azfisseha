@@ -6,7 +6,7 @@ import edu.wctc.Rooms.Room;
 import java.util.Locale;
 
 public abstract class RoomBuilder {
-    public Room buildRoom(String type)
+    public Room buildRoom(String type, String name, String description)
     {
         //TODO:
         Room room = createRoom(type);

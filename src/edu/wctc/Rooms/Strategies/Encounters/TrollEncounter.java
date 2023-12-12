@@ -2,7 +2,7 @@ package edu.wctc.Rooms.Strategies.Encounters;
 
 import java.util.Random;
 
-import static edu.wctc.MazeDriver.NULL_ATTEMPT;
+import static edu.wctc.MazeIO.NULL_ATTEMPT;
 
 public class TrollEncounter implements EncounterBehavior{
     private boolean defeated;

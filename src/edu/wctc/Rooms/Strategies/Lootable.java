@@ -17,9 +17,13 @@ public class Lootable implements LootableBehavior{
     }
 
     @Override
-    public String loot() {
-        looted = true;
-        return loot.getDescription();
+    public Loot loot() {
+        if(looted)
+            return null;
+        else {
+            looted = true;
+            return loot;
+        }
     }
 
     @Override

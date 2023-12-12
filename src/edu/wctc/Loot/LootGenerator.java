@@ -22,4 +22,10 @@ public class LootGenerator {
         //TODO: implement RNG loot generation
         return null;
     }
+
+    public Loot getLoot(String lootName)
+    {
+        //TODO: implement nonrandom loot generation
+        return null;
+    }
 }

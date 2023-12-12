@@ -1,6 +1,8 @@
 package edu.wctc.Rooms.Strategies;
 
-import static edu.wctc.MazeDriver.NULL_ATTEMPT;
+import edu.wctc.Loot.Loot;
+
+import static edu.wctc.MazeIO.NULL_ATTEMPT;
 
 public class UnLootable implements LootableBehavior{
     @Override
@@ -9,8 +11,8 @@ public class UnLootable implements LootableBehavior{
     }
 
     @Override
-    public String loot() {
-        return "There is nothing in this room to loot." + NULL_ATTEMPT;
+    public Loot loot() {
+        return null;
     }
 
     @Override
