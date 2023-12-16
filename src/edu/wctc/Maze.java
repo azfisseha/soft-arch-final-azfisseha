@@ -9,23 +9,39 @@ public class MazeBuilder {
     private RoomBuilder roomBuilder;
 
     private Random rand = new Random();
+    private Room[][] maze;
+
+    public MazeBuilder(int width, int length)
+    {
+        maze = new Room[width][length];
+    }
+
+
     ///returns the starting room
-    public Room constructMaze()
+    public Room[][] constructMaze()
     {
         Room thisRoom = roomBuilder.buildRoom("basic", "Foyer", "You stand in the foyer of an abandoned mansion.  The walls are lined with decaying portraits of likely long dead patriarchs, and the room is dimly lit by the flicker of candlelight from an ornate chandelier overhead.  There is a large set of double doors in front of you.");
 
-        thisRoom.setAdjoiningRoom(Directions.NORTH, roomBuilder.buildRoom("basic", "Main Hallway", "There are several doors leading out in every direction.  Which way will you proceed?"));
-        thisRoom
-                .getAdjoiningRoom(Directions.NORTH)
-                .setAdjoiningRoom(Directions.SOUTH, thisRoom);
+        maze[0][0] = thisRoom;
+        for(int x = 1; x < maze.length; maze++)
+        {
+            
+        }
 
-        //advance to the Main Hallway
-        thisRoom = thisRoom.getAdjoiningRoom(Directions.NORTH);
+//        thisRoom.setAdjoiningRoom(Directions.NORTH, roomBuilder.buildRoom("basic", "Main Hallway", "There are several doors leading out in every direction.  Which way will you proceed?"));
+//        thisRoom
+//                .getAdjoiningRoom(Directions.NORTH)
+//                .setAdjoiningRoom(Directions.SOUTH, thisRoom);
+//
+//        //advance to the Main Hallway
+//        thisRoom = thisRoom.getAdjoiningRoom(Directions.NORTH);
+//
+//        //randomly generate rooms in each of the following directions
+//        buildMazeBranch(thisRoom, Directions.NORTH);
+//        buildMazeBranch(thisRoom, Directions.EAST);
+//        buildMazeBranch(thisRoom, Directions.WEST);
 
-        //randomly generate rooms in each of the following directions
-        buildMazeBranch(thisRoom, Directions.NORTH);
-        buildMazeBranch(thisRoom, Directions.EAST);
-        buildMazeBranch(thisRoom, Directions.WEST);
+        return maze;
     }
 
     private void buildMazeBranch(Room thisRoom, Directions dir)
